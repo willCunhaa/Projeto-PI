@@ -1,0 +1,94 @@
+\\CRIANDO E CONFIGURANDO O GIT E O GITHUB.
+
+\\GITHUB - CRIAR LOGIN NA PÁGINA DO GITHUB E CONFIRMAR APÓS EMAIL.
+
+\\CONFIGURAR O GIT - ENTRAT NO PROMPT DE COMANDO.
+
+Microsoft Windows [versão 10.0.19045.5965]
+(c) Microsoft Corporation. Todos os direitos reservados.
+
+\\AQUI VAMOS ADICIONAR O NOME DO USUÁRIO
+C:\Users\Alunos>git config --global user.name "William Cunha"
+
+\\AQUI ADICIONAMOS O EMAIL - DEVE SER O MESMO UTILIZADO PARA CRIAR O PERFIL NO GITHUB
+C:\Users\Alunos>git config --global user.email "william.cunha2@fatec.com.br"
+
+\\VERIFICA QUAIS USUARIOS ESTÃO ADICIONADOS\CONFIGURADOS AO COMPUTADOR
+C:\Users\Alunos>git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+user.name=William Cunha
+user.email=william.cunha2@fatec.com.br
+
+\\RETIRA O EMAIL DA CONFIGURAÇÃO DO COMPUTADOR - CASO DE MUDANÇA DE NOME É SÓ SUBSTITUIR user.email por user.name.
+C:\Users\Alunos>git config --global --unset user.email
+
+\\NOVAMENTE PESQUISANDO PARA VER SE EXCLUIU O EMAIL
+C:\Users\Alunos>git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+user.name=William Cunha
+
+\\ADICIONADO NOVAMENTE O EMAIL DE MANEIRA CORRETA COM O GITHUB
+C:\Users\Alunos>git config --global user.email "will.amcunhaa@gmail.com"
+
+\\ADICIONAR PASTA FATEC QUE ESTÁ NA ÁREA DE TRABALHO AO PROMPT DE COMANDO
+C:\Users\Alunos>cd C:\Users\Alunos\Desktop\FATEC
+
+\\AQUI ESTA LINKANDO O DIRETÓRIO JUNTO AO GITHUB ATRAVES DO LINK DO GITHUB
+C:\Users\Alunos\Desktop\FATEC>git clone https://github.com/willCunhaa/Projeto-PI.git
+Cloning into 'Projeto-PI'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+Receiving objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+
+\\
+C:\Users\Alunos\Desktop\FATEC>dir
+ O volume na unidade C não tem nome.
+ O Número de Série do Volume é 509F-7CEA
+
+18/06/2025  20:06    <DIR>          .
+18/06/2025  20:06    <DIR>          ..
+18/06/2025  20:04    <DIR>          1° SEMESTRE
+18/06/2025  20:07    <DIR>          Projeto-PI
+               0 arquivo(s)              0 bytes
+               4 pasta(s)   130.451.562.496 bytes disponíveis
+
+C:\Users\Alunos\Desktop\FATEC>git status
+fatal: not a git repository (or any of the parent directories): .git
+
+C:\Users\Alunos\Desktop\FATEC>
